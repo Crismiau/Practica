@@ -1,241 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <!-- Aquí van todas las cosas que el navegador necesita saber -->
+    <!-- Metadatos básicos -->
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/style.css" />
-    <!-- Estas líneas traen las fuentes bonitas de Google -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Clínica veterinaria The Royal Pet - Cuidamos de tus mascotas con amor y profesionalismo"
+    />
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linka E-Commerce</title>
+
+    <!-- Iconos de Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <title>The Royal Pet - Clínica Veterinaria</title>
   </head>
   <body>
-    <!-- 🏠 HEADER: Es como la entrada de nuestra casa web -->
+    <!-- Encabezado principal -->
     <header>
-      <nav class="nav-bar">
-        <img class="logo" src="/assets/logo.png" alt="Logo Positivus" />
-        <!-- Menú principal con todos los links importantes -->
-        <ul class="nav-list">
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Uses Cases</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Blog</a></li>
-          <li class="list-button"><a href="#">Request a quote</a></li>
-        </ul>
+      <!-- Barra de navegación principal -->
+      <nav class="barra-navegacion">
+        <!-- Logo de la clínica -->
+        <div class="contenedor-logo">
+          <img src="./assets/logos/image.png" alt="Logo The Royal Pet" />
+        </div>
+
+        <!-- Botón de menú hamburguesa para móvil -->
+        <div class="boton-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Menú de navegación -->
+        <div class="contenedor-menu">
+          <!-- Lista de enlaces de navegación -->
+          <ul class="lista-navegacion">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
+    <!-- Contenido principal de la página -->
     <main>
-      <!-- 🌟 SECCIÓN PRINCIPAL: Es lo primero que ven los visitantes -->
-      <section class="section-index">
-        <div class="content-left">
-          <h1>Navigating the digital landscape for success</h1>
+      <!-- Sección Hero con video de fondo -->
+      <section id="inicio" class="contenedor-hero">
+        <!-- Video de fondo -->
+        <video
+          class="video-hero"
+          src="./assets/logos/hero-vide.mp4"
+          autoplay
+          muted
+          loop
+          aria-hidden="true"
+          playsinline
+        ></video>
+
+        <!-- Contenido principal del hero -->
+        <div class="contenido-hero">
+          <!-- Título principal -->
+          <h1>Clínica The Royal Pet</h1>
+
+          <!-- Descripción principal -->
           <p>
-            Our digital marketing agency helps businesses grow and succeed online
-            through a range of services including SEO, PPC, social media
-            marketing, and content creation.
+            Salvaguardamos la vida y salud de tus mascotas, con amor,
+            profesionalismo <br />
+            y una experiencia única para tu mascota y para ti
           </p>
-          <button class="section-button">Book a consultation</button>
-        </div>
-        <div class="content-right">
-          <img class="hero-image"
-            src="/assets/imginicio.png"
-            alt="Megaphone with colors green and white"
-          />
+
+          <!-- Botón de llamada a la acción -->
+          <button class="boton-cita">Agendar cita</button>
         </div>
       </section>
 
-      <nav class="logos-bar">
-        <img class="logos" src="/assets/amazon.png" alt="Amazon logo" />
-        <img class="logos" src="/assets/dribble.png" alt="Ebay logo" />
-        <img class="logos" src="/assets/hubspot.png" alt="Walmart logo" />
-        <img class="logos" src="/assets/notion.png" alt="Target logo" />
-        <img class="logos" src="/assets/netflix.png" alt="Best Buy logo" />
-        <img class="logos" src="/assets/zoom.png" alt="Costco logo" />
-      </nav>
+      <!-- Sección de Servicios -->
+      <section id="servicios" class="seccion-servicios">
+        <div class="contenedor-servicios">
+          <h2 class="titulo-seccion">Nuestros Servicios</h2>
+          <p class="descripcion-seccion">
+            Ofrecemos una amplia gama de servicios veterinarios con los más
+            altos estándares de calidad
+          </p>
 
-      <!-- 🎯 SECCIÓN DE SERVICIOS: Aquí mostramos todo lo que hacemos -->
-      <section class="services-section">
-        <div class="services-header">
-          <h2>Services</h2>
-          <p>At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:</p>
-        </div>
-        
-        <!-- Cada tarjeta es como una cajita que explica un servicio -->
-        <div class="services-grid">
-          <!-- Tarjeta 1: SEO -->
-          <div class="service-card light">
-            <div class="service-content">
-              <h3>Search engine optimization</h3>
-              <img src="/assets/icon1.png" alt="Search engine optimization icon" />
-              <button class="learn-more">
-                <span>Learn more</span>
-                <img src="/assets/readmore.png" alt="Arrow right" />
-              </button>
-            </div>
-          </div>
+          <div class="grid-servicios">
+            <!-- Servicio 1 -->
+            <article class="tarjeta-servicio">
+              <div class="icono-servicio">
+                <i class="fas fa-stethoscope"></i>
+              </div>
+              <h3>Consulta General</h3>
+              <p>
+                Evaluación completa del estado de salud de tu mascota con
+                profesionales expertos.
+              </p>
+            </article>
 
-          <div class="service-card green">
-            <div class="service-content">
-              <h3>Pay-per-click advertising</h3>
-              <img
-                src="/assets/icon2.png"
-                alt="Pay per click advertising icon"
-              />
-              <button class="learn-more">
-                <span>Learn more</span>
-                <img src="/assets/readmore.png" alt="Arrow right" />
-              </button>
-            </div>
-          </div>
+            <!-- Servicio 2 -->
+            <article class="tarjeta-servicio">
+              <div class="icono-servicio">
+                <i class="fas fa-syringe"></i>
+                <!--Estos "I" son iconos que se pueden buscar en la pagina de font awesome-->
+              </div>
+              <h3>Vacunación</h3>
+              <p>
+                Programa completo de vacunación para prevenir enfermedades
+                comunes.
+              </p>
+            </article>
 
-          <div class="service-card dark">
-            <div class="service-content">
-              <h3>Social Media Marketing</h3>
-              <img
-                src="/assets/icon3.png"
-                alt="Social media marketing icon"
-              />
-              <button class="learn-more">
-                <span>Learn more</span>
-                <img src="/assets/readmorewhite.png" alt="Arrow right" />
-            </div>
-          </div>
+            <!-- Servicio 3 -->
+            <article class="tarjeta-servicio">
+              <div class="icono-servicio">
+                <i class="fas fa-tooth"></i>
+              </div>
+              <h3>Limpieza Dental</h3>
+              <p>
+                Cuidado dental profesional para mantener la salud bucal de tu
+                mascota.
+              </p>
+            </article>
 
-          <div class="service-card light">
-            <div class="service-content">
-              <h3>Email Marketing</h3>
-              <img src="/assets/icon4.png" alt="Email marketing icon" />
-              <button class="learn-more">
-                <span>Learn more</span>
-                <img src="/assets/readmore.png" alt="Arrow right" />
-              </button>
-            </div>
-          </div>
+            <!-- Servicio 4 -->
+            <article class="tarjeta-servicio">
+              <div class="icono-servicio">
+                <i class="fas fa-microscope"></i>
+              </div>
+              <h3>Laboratorio</h3>
+              <p>
+                Análisis clínicos y diagnósticos precisos con tecnología
+                avanzada.
+              </p>
+            </article>
 
-          <div class="service-card green">
-            <div class="service-content">
-              <h3>Content Creation</h3>
-              <img src="/assets/icon5.png" alt="Content creation icon" />
-              <button class="learn-more">
-                <span>Learn more</span>
-                <img src="/assets/readmore.png" alt="Arrow right" />
-              </button>
-            </div>
-          </div>
+            <!-- Servicio 5 -->
+            <article class="tarjeta-servicio">
+              <div class="icono-servicio">
+                <i class="fas fa-cut"></i>
+              </div>
+              <h3>Peluquería</h3>
+              <p>
+                Servicios de grooming profesional para el cuidado estético de tu
+                mascota.
+              </p>
+            </article>
 
-          <div class="service-card dark">
-            <div class="service-content">
-              <h3>Analytics and Tracking</h3>
-              <img
-                src="/assets/icon6.png"
-                alt="Analytics and tracking icon"
-              />
-              <button class="learn-more">
-                <span>Learn more</span>
-                <img src="/assets/readmorewhite.png" alt="Arrow right" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 📚 CASOS DE ÉXITO: Aquí contamos nuestras historias -->
-      <section class="case-studies">
-        <div class="case-header">
-          <h2>Case Studies</h2>
-          <p>Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies</p>
-        </div>
-        
-        <div class="cases-container">
-          <!-- Cada caso es una historia de éxito -->
-          <div class="case-item">
-            <p>For a local restaurant, we implemented a targeted PPC campaign that resulted in a 150% increase in website traffic and a 25% increase in sales.</p>
-            <button class="case-learn-more">
-              Learn more
-              <img src="/assets/readmorewhite.png" alt="Learn more icon">
-            </button>
-          </div>
-
-          <div class="case-divider"></div>
-
-          <div class="case-item">
-            <p>For a B2B software company, we developed an SEO strategy that resulted in a first page ranking for key keywords and a 200% increase in organic traffic.</p>
-            <button class="case-learn-more">
-              Learn more
-              <img src="/assets/readmorewhite.png" alt="Learn more icon">
-            </button>
-          </div>
-
-          <div class="case-divider"></div>
-
-          <div class="case-item">
-            <p>For a national retail chain, we created a social media marketing campaign that increased followers by 25% and generated a 20% increase in online sales.</p>
-            <button class="case-learn-more">
-              Learn more
-              <img src="/assets/readmorewhite.png" alt="Learn more icon">
-            </button>
+            <!-- Servicio 6 -->
+            <article class="tarjeta-servicio">
+              <div class="icono-servicio">
+                <i class="fas fa-hospital"></i>
+              </div>
+              <h3>Cirugía</h3>
+              <p>
+                Procedimientos quirúrgicos con equipo especializado y monitoreo
+                constante.
+              </p>
+            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- 🏁 FOOTER: Es como el piso de abajo de nuestra casa web -->
+    <!-- Footer -->
     <footer class="footer">
-      <div class="footer-content">
-        <!-- Columna izquierda: Nuestra información de contacto -->
-        <div class="footer-left">
-          <img class="footer-logo" src="/assets/logo-white.png" alt="Positivus Logo" />
-          <div class="contact-info">
-            <h3>Contact us:</h3>
-            <p>Email: info@positivus.com</p>
-            <p>Phone: 555-567-8901</p>
-            <p>Address: 1234 Main St<br/>Moonstone City, Stardust State 12345</p>
-          </div>
+      <div class="contenedor-footer">
+        <!-- Información de la clínica -->
+        <div class="columna-footer info-clinica">
+          <p>
+            Cuidamos a tus mascotas como si fueran nuestras, brindando atención
+            veterinaria de calidad y amor incondicional.
+          </p>
         </div>
 
-        <!-- Columna central: Links rápidos -->
-        <div class="footer-center">
-          <nav class="footer-nav">
-            <a href="#about">About us</a>
-            <a href="#services">Services</a>
-            <a href="#cases">Use Cases</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#blog">Blog</a>
-          </nav>
+        <!-- Enlaces rápidos -->
+        <div class="columna-footer enlaces-rapidos">
+          <h4>Enlaces Rápidos</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
         </div>
 
-        <!-- Columna derecha: Newsletter y redes sociales -->
-        <div class="footer-right">
-          <div class="newsletter">
-            <input type="email" placeholder="Email" class="footer-input" />
-            <button class="subscribe-btn">Subscribe to news</button>
-          </div>
-          <div class="social-links">
-            <a href="#" class="social-icon">
-              <img src="/assets/linkedin.png" alt="LinkedIn" />
-            </a>
-            <a href="#" class="social-icon">
-              <img src="/assets/facebook.png" alt="Facebook" />
-            </a>
-            <a href="#" class="social-icon">
-              <img src="/assets/twitter.png" alt="Twitter" />
-            </a>
-          </div>
+        <!-- Horarios de atención -->
+        <div class="columna-footer horarios">
+          <h4>Horarios de Atención</h4>
+          <ul>
+            <li><span>Lunes - Viernes:</span> 8:00 AM - 8:00 PM</li>
+            <li><span>Sábados:</span> 9:00 AM - 6:00 PM</li>
+            <li><span>Domingos:</span> 9:00 AM - 2:00 PM</li>
+            <li class="emergencias"><span>Emergencias:</span> 24/7</li>
+          </ul>
+        </div>
+
+        <!-- Información de contacto -->
+        <div class="columna-footer contacto">
+          <h4>Contacto</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Riwi, De moda Outlet, Medellín </span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>+57 313 5443356</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>heycristian@gmail.com</span>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- La línea final con derechos de autor -->
-      <div class="footer-bottom">
-        <p>© 2023 Positivus. All Rights Reserved.</p>
-        <a href="#privacy">Privacy Policy</a>
+      <!-- Barra de derechos de autor -->
+      <div class="barra-copyright">
+        <p>
+          &copy; 2024 The Royal Pet - Clínica Veterinaria. <br> Cristian Camilo Agudelo Foronda <br> Todos los derechos
+          reservados.
+        </p>
       </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Elementos del DOM para el menú móvil
+      const botonMenu = document.querySelector(".boton-menu");
+      const listaNavegacion = document.querySelector(".lista-navegacion");
+      const body = document.body;
+
+      // Manejador de eventos para el menú móvil
+      botonMenu.addEventListener("click", () => {
+        // Alternar clases para mostrar/ocultar el menú
+        listaNavegacion.classList.toggle("activo");
+        botonMenu.classList.toggle("activo");
+        body.classList.toggle("menu-activo");
+      });
+    </script>
   </body>
 </html>
