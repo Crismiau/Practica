@@ -1,0 +1,485 @@
+/* 🎨 ESTILOS GENERALES: Las reglas básicas para toda la página */
+body {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+}
+
+/* 🏠 HEADER Y NAVEGACIÓN: La barra de arriba con el menú */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  margin-top: 0;
+  background-color: white;
+}
+
+/* El logo de la empresa */
+.logo {
+  width: 190px;
+  height: 40px;
+  margin-left: 0;
+}
+
+/* La lista de links del menú */
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cada link del menú */
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* El botón de Request a quote */
+.list-button {
+  border: 2px solid #191a23;
+  border-radius: 14px;
+  padding: 12px 24px;
+  color: #191a23;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.list-button:hover {
+  background-color: #b9ff66;
+  color: white;
+}
+
+/* ✨ EFECTOS BONITOS: Lo que pasa cuando pasas el mouse por encima */
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: #b9ff66;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+/* Cuando el mouse pasa por encima de los links */
+.nav-list li a:hover::after {
+  width: 80%;
+}
+
+.nav-list li a:hover {
+  color: #61744b;
+  transform: translateY(-2px);
+}
+
+/* 🎯 SECCIÓN PRINCIPAL: La primera parte que ven los visitantes */
+.section-index {
+  display: flex;
+  flex-direction: space-between;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+/* El lado izquierdo con el texto principal */
+.content-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.content-left h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  text-align: left;
+}
+
+.content-left p {
+  padding-top: 20px;
+  font-size: 20px;
+  width: 460px;
+  padding-bottom: 20px;
+}
+
+.hero-image {
+  width: 550px;
+  margin-left: 20px;
+}
+
+.section-button {
+  background-color: #191a23;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  border-radius: 14px;
+  font-weight: 700;
+}
+.section-button:hover {
+  background-color: #b9ff66;
+  color: black;
+  font-weight: 700;
+  border: 1px solid black;
+  transition: background-color 0.6s ease;
+}
+.logos-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.logos {
+  width: 150px;
+}
+
+/* 🎨 SECCIÓN DE SERVICIOS: Las tarjetas que muestran lo que hacemos */
+.services-section {
+  padding: 100px;
+  padding-top: 0;
+}
+
+.services-header {
+  margin-bottom: 50px;
+}
+
+.services-header h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.services-header p {
+  font-size: 18px;
+  max-width: 600px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* Las tarjetas de servicios */
+.service-card {
+  border-radius: 45px;
+  padding: 50px;
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+/* Los diferentes colores de las tarjetas */
+.service-card.light {
+  background-color: #f3f3f3;
+}
+.service-card.light h3 {
+  border: 1px solid black;
+  background-color: #b9ff66;
+  color: black;
+}
+.service-card.green {
+  background-color: #b9ff66;
+}
+.service-card.green h3 {
+  border: 1px solid black;
+  background-color: #ffffff;
+  color: black;
+}
+
+.service-card.dark {
+  background-color: #191a23;
+  color: white;
+}
+.service-card.dark h3 {
+  border: 1px solid white;
+  background-color: #ffffff;
+  color: black;
+}
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  max-width: 200px;
+  border-radius: 14px;
+  border: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.service-card img {
+  width: 250px;
+  height: auto;
+  align-self: flex-end;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.learn-more {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: 20px;
+  color: inherit;
+}
+
+.learn-more img {
+  width: 60px;
+  height: 50px;
+  order: -1;
+}
+
+.service-card.dark .learn-more {
+  color: white;
+}
+
+/* 📚 CASOS DE ÉXITO: Donde mostramos nuestras historias */
+.case-studies {
+  padding: 0 100px;
+  margin-bottom: 100px;
+}
+
+.case-header {
+  margin-bottom: 50px;
+}
+
+.case-header h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: inline-block;
+  background-color: #b9ff66;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.case-header p {
+  font-size: 20px;
+  max-width: 800px;
+}
+
+.cases-container {
+  background-color: #191a23;
+  border-radius: 45px;
+  padding: 60px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.case-item {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.case-item p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.case-divider {
+  width: 1px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 20px;
+}
+
+.case-learn-more {
+  background: none;
+  border: none;
+  color: #b9ff66;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.case-learn-more img {
+  width: 60px;
+  height: 50px;
+}
+
+.case-learn-more:hover {
+  opacity: 0.8;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}
+
+/* 🏁 FOOTER: El pie de página */
+.footer {
+  background-color: #191a23;
+  color: white;
+  padding: 60px 100px 30px;
+  border-radius: 45px 45px 0 0;
+}
+
+/* Las tres columnas del footer */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.footer-left {
+  max-width: 300px;
+}
+
+.footer-logo {
+  width: 190px;
+  margin-bottom: 30px;
+}
+
+.contact-info h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: inline-block;
+  background-color: #b9ff66;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #b9ff66;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+/* ✉️ NEWSLETTER: El formulario para suscribirse */
+.newsletter {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-input {
+  background-color: #292a32;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 14px;
+  color: white;
+  width: 250px;
+  font-family: inherit;
+}
+
+.footer-input::placeholder {
+  color: #666;
+}
+
+.subscribe-btn {
+  background-color: #b9ff66;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 14px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #a8eb5c;
+  transform: translateY(-2px);
+}
+
+/* 📱 REDES SOCIALES: Los iconos de redes sociales */
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #b9ff66;
+}
+
+/* 🎈 EFECTOS DE HOVER: Animaciones cuando pasas el mouse */
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.learn-more:hover {
+  opacity: 0.8;
+}
